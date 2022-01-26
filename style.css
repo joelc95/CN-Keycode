@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+/* font-family: 'Dongle', sans-serif; */
+
+html {
+    /* background: linear-gradient(pink, rgb(135, 250, 250));
+    background-repeat: no-repeat; */
+
+    /* GLASSMORPHISM BACKGROUND GRADIENT */
+    background-color: #323953;
+    background-image: 
+        radial-gradient(at 52% 25%, rgba(73, 182, 182, 0.568) 0, transparent 59%),
+        radial-gradient(at 50% 75%, hsl(100, 74%, 40%) 0, transparent 55%);
+    height: 100vh;
+}
+
+body {
+    margin:0;
+    padding:0;
+}
+
+.header-container {
+    /* border: red solid 5px; */
+
+    display:flex;
+    justify-content: center;
+}
+
+/* .header-message {
+    border: blue solid 3px;
+} */
+
+
+
+.middle-display-container {
+    display:flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    
+    margin-left:5%;
+    width: 90%;
+    height: 80vh;
+}
+
+.middle-display-number {
+    display: flex;
+    height: 50%;
+    width: 90%;
+    /* text-align: center; */
+    justify-content: center;
+    align-items: center;
+    font-family: 'Dongle';
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+    
+}
+
+
+.event-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+    width: 90%;
+    font-family: 'Dongle';
+    font-size: 30px;
+    font-weight: 300;
+    color: white;
+    
+}
+
+.event-card {
+    width: 25%;
+    padding: 1rem;
+    border-radius: 10px;
+    /* GLASSMORPHISM GLASS CARD EFFECT*/
+}
+
+
+.card-head {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(79, 164, 243, 0.144);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border: 1px solid rgba(120, 208, 248, 0.125);
+
+    padding-left: 1rem;
+    font-weight: 400;
+}
+
+.card-content {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(71, 50, 71, 0.144);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-top: none;
+
+    padding-left: 1rem;
+}
+
+
+/* MOBILE DISPLAY */
+
+@media all and (max-width: 500px) {
+    .middle-display-number {
+        width: 80%;
+    }
+    .event-cards-container {
+        flex-wrap: wrap;
+        width: 80%;
+        /* justify-content: stretch; */
+    }
+    .event-card {
+        width: 80%;
+    }
+}
